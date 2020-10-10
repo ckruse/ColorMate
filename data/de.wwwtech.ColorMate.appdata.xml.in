@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>de.wwwtech.ColorMate.desktop</id>
+  <name>ColorMate</name>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>MIT</project_license>
+  <developer_name>Christian Kruse</developer_name>
+  <summary>Convert CSS colors between notations</summary>
+
+  <description>
+    <p>
+      CSS comes in basically three color notations: #rgb, rgb() and hsl(). ColorMate is a small companion app that
+      converts colors between these three notations for you.
+    </p>
+	</description>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>ColorMate main window</caption>
+      <image>https://wwwtech.de/pictures/301.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.0" date="2020-09-25">
+      <description>
+        <p>First release providing the basic feature set</p>
+      </description>
+    </release>
+  </releases>
+
+  <launchable type="desktop-id">de.wwwtech.ColorMate.desktop</launchable>
+  <update_contact>cjk_AT_defunct.ch</update_contact>
+</component>

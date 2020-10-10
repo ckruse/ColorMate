@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ColorMate
+Exec=colormate
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
+Icon=de.wwwtech.ColorMate

@@ -1,0 +1,4 @@
+data/de.wwwtech.ColorMate.desktop.in
+data/de.wwwtech.ColorMate.appdata.xml.in
+data/de.wwwtech.ColorMate.gschema.xml
+src/window.ui
