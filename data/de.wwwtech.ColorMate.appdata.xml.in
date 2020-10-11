@@ -6,6 +6,8 @@
 	<project_license>MIT</project_license>
   <developer_name>Christian Kruse</developer_name>
   <summary>Convert CSS colors between notations</summary>
+  <content_rating type="oars-1.1" />
+  <url type="homepage">https://github.com/ckruse/ColorMate</url>
 
   <description>
     <p>
