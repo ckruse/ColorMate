@@ -7,6 +7,7 @@ use gio::prelude::*;
 use gtk::prelude::*;
 
 mod config;
+mod static_resources;
 mod window;
 use crate::window::Window;
 
@@ -17,9 +18,7 @@ fn main() {
     bindtextdomain("colormate", config::LOCALEDIR);
     textdomain("colormate");
 
-    let res = gio::Resource::load(config::PKGDATADIR.to_owned() + "/colormate.gresource")
-        .expect("Could not load resources");
-    gio::resources_register(&res);
+    static_resources::init().expect("GResource initialization failed.");
 
     let app = gtk::Application::new(Some("de.wwwtech.ColorMate"), Default::default()).unwrap();
     app.connect_activate(move |app| {

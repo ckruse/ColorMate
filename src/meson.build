@@ -1,7 +1,7 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 gnome = import('gnome')
 
-gnome.compile_resources('colormate',
+colormate_resources = gnome.compile_resources('colormate',
   'colormate.gresource.xml',
   gresource_bundle: true,
   install: true,
@@ -27,10 +27,28 @@ run_command(
   check: true
 )
 
+resource_conf = configuration_data()
+resource_conf.set_quoted('RESOURCEFILE', colormate_resources.full_path())
+resource_rs = configure_file(
+  input: 'static_resources.rs.in',
+  output: 'static_resources.rs',
+  configuration: resource_conf
+)
+
+run_command(
+  'cp',
+  resource_rs,
+  meson.current_source_dir(),
+  check: true
+)
+
+
 sources = files(
   'config.rs',
   'main.rs',
   'window.rs',
+  'static_resources.rs.in',
+  'static_resources.rs'
 )
 
 cargo_script = find_program(join_paths(meson.source_root(), 'build-aux/cargo.sh'))
