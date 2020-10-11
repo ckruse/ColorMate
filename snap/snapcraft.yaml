@@ -1,0 +1,50 @@
+name: colormate
+adopt-info: colormate
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict
+base: core18
+architectures:
+  - build-on: amd64
+
+slots:
+  # for GtkApplication registration
+  colormate:
+    interface: dbus
+    bus: session
+    name: de.wwwtech.ColorMate
+
+apps:
+  colormate:
+    extensions: [gnome-3-34]
+    command: colormate
+    common-id: de.wwwtech.ColorMate.desktop
+    desktop: usr/share/applications/de.wwwtech.ColorMate.desktop
+    plugs:
+      - gsettings
+
+parts:
+  colormate:
+    parse-info: [usr/share/metainfo/de.wwwtech.ColorMate.appdata.xml]
+    source: .
+    plugin: meson
+    meson-parameters: [--prefix=/usr]
+    organize:
+      snap/colormate/current/usr: usr
+    build-packages:
+      - build-essential
+      - appstream
+      - curl
+    stage-packages:
+      - git
+    build-environment:
+      - PATH: $HOME/.cargo/bin:$PATH
+      - PKG_CONFIG_PATH: $SNAPCRAFT_STAGE/usr/lib/pkgconfig:$PKG_CONFIG_PATH
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version $(git describe --tags --abbrev=10)
+    override-build: |
+      curl https://sh.rustup.rs -sSf | sh -s -- -y
+      . $HOME/.cargo/env
+      rustup toolchain install nightly
+      rustup default nightly
+      snapcraftctl build
