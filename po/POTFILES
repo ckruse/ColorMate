@@ -1,0 +1,7 @@
+data/com.github.ckruse.ColorMate.desktop.in
+data/com.github.ckruse.ColorMate.appdata.xml.in
+data/com.github.ckruse.ColorMate.gschema.xml
+src/window.ui
+src/main.vala
+src/window.vala
+
