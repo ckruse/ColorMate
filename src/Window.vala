@@ -58,6 +58,8 @@ namespace ColorMate {
     }
 
     construct {
+      set_titlebar (get_header ());
+
       var clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD);
       color_entry.changed.connect (this.on_color_entry_changed);
       copy_rgb_btn.clicked.connect(() => {
@@ -78,6 +80,17 @@ namespace ColorMate {
       delete_event.connect (e => {
         return before_destroy ();
       });
+    }
+
+    private Gtk.HeaderBar get_header () {
+        var header = new Gtk.HeaderBar () {
+            title = "ColorMate",
+            has_subtitle = false,
+            show_close_button = true
+        };
+        header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+
+        return header;
     }
 
     public void on_color_entry_changed () {

@@ -44,7 +44,7 @@ namespace ColorMate {
         );
       });
 
-      win.present ();
+      win.show_all ();
     }
   }
 }
