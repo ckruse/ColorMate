@@ -5,10 +5,10 @@
   "sdk": "io.elementary.Sdk",
   "command": "colormate",
   "finish-args": [
-    "--share=network",
     "--share=ipc",
     "--socket=fallback-x11",
-    "--socket=wayland"
+    "--socket=wayland",
+    "--system-talk-name=org.freedesktop.Accounts"
   ],
   "cleanup": [
     "/include",
