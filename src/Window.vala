@@ -51,6 +51,8 @@ namespace ColorMate {
     [GtkChild]
     unowned Gtk.Entry color_entry;
 
+    private GLib.Settings settings;
+
     public Window (Gtk.Application app) {
       Object (application: app, border_width: 0);
     }
@@ -66,6 +68,15 @@ namespace ColorMate {
       });
       copy_hsl_btn.clicked.connect(() => {
         clipboard.set_text (hsl_lbl.get_text(), -1);
+      });
+
+      settings = new GLib.Settings ("com.github.ckruse.ColorMate");
+
+      move (settings.get_int ("window-x"), settings.get_int ("window-y"));
+      resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
+
+      delete_event.connect (e => {
+        return before_destroy ();
       });
     }
 
@@ -246,6 +257,20 @@ namespace ColorMate {
 
     private int to255(double v) {
       return (int)double.min (255f, 256f * v);
+    }
+
+    private bool before_destroy () {
+        int x, y, width, height;
+
+        get_position (out x, out y);
+        get_size (out width, out height);
+
+        settings.set_int ("window-x", x);
+        settings.set_int ("window-y", y);
+        settings.set_int ("window-width", width);
+        settings.set_int ("window-height", height);
+
+        return false;
     }
   }
 }

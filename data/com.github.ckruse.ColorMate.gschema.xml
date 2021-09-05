@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="colormate">
-	<schema id="com.github.ckruse.ColorMate" path="/com/github/ckruse/ColorMate/">
-	</schema>
+  <schema id="com.github.ckruse.ColorMate" path="/com/github/ckruse/ColorMate/">
+    <key name="window-width" type="i">
+      <default>400</default>
+      <summary>The saved width of the window.</summary>
+      <description>The saved width of the window.</description>
+    </key>
+    <key name="window-height" type="i">
+      <default>100</default>
+      <summary>The saved height of the window.</summary>
+      <description>The saved height of the window.</description>
+    </key>
+    <key name="window-x" type="i">
+      <default>250</default>
+      <summary>The saved X position of the window</summary>
+      <description>The saved X position of the window</description>
+    </key>
+    <key name="window-y" type="i">
+      <default>250</default>
+      <summary>The saved Y position of the window</summary>
+      <description>The saved Y position of the window</description>
+    </key>
+  </schema>
 </schemalist>
