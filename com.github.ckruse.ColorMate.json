@@ -29,8 +29,8 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "git",
-          "url": "file:///home/ckruse/Code/projects/ColorMate"
+          "type": "dir",
+          "path": "."
         }
       ]
     }
