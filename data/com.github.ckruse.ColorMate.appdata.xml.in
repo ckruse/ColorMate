@@ -13,10 +13,12 @@
   <releases>
     <release version="1.0.1" date="2021-09-08">
       <description>
+        <p>This is a pure bugfix release containing these fixes:</p>
+
         <ul>
-	  <li>include releases in the appdata</li>
-	  <li>fix flatpack manifest</li>
-	</ul>
+          <li>include releases in the appdata</li>
+          <li>fix flatpack manifest</li>
+        </ul>
       </description>
     </release>
 
