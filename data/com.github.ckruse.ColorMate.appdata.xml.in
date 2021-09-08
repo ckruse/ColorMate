@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>com.github.ckruse.ColorMate.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+  <id>com.github.ckruse.ColorMate.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
   <name>ColorMate</name>
   <summary>Your friendly color helper</summary>
-	<description>
+
+  <description>
     <p>A color helper for web developers. Enter a color in <code>#RGB</code>, <code>rgb()</code> or <code>hsl()</code>
-        and the corresponding representations with a handy copy button.</p>
-	</description>
+    and the corresponding representations with a handy copy button.</p>
+  </description>
+
+  <releases>
+    <release version="1.0.0" date="2021-09-05">
+      <description>
+        <p>Initial Release 🎉️</p>
+      </description>
+    </release>
+  </releases>
+
   <launchable type="desktop-id">com.github.ckruse.ColorMate.desktop</launchable>
+
   <provides>
     <binary>com.github.ckruse.ColorMate</binary>
   </provides>
+
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
@@ -42,16 +54,21 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+
   <developer_name>Christian Kruse</developer_name>
+
   <url type="homepage">https://github.com/ckruse/ColorMate</url>
   <url type="bugtracker">https://github.com/ckruse/ColorMate/issues</url>
   <url type="help">https://github.com/ckruse/ColorMate/issues</url>
+
   <update_contact>christian_AT_kruse.cool</update_contact>
-   <screenshots>
+
+  <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/ckruse/ColorMate/main/ColorMate.png</image>
     </screenshot>
   </screenshots>
+
   <custom>
     <value key="x-appcenter-color-primary">#fff</value>
     <value key="x-appcenter-color-primary-text">#333</value>
