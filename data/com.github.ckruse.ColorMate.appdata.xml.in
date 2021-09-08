@@ -7,8 +7,7 @@
   <summary>Your friendly color helper</summary>
 
   <description>
-    <p>A color helper for web developers. Enter a color in <code>#RGB</code>, <code>rgb()</code> or <code>hsl()</code>
-    and the corresponding representations with a handy copy button.</p>
+    <p>A color helper for web developers. Enter a color in #RGB, rgb() or hsl() and the corresponding representations with a handy copy button.</p>
   </description>
 
   <releases>
