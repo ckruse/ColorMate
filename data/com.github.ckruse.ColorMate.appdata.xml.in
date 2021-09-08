@@ -12,6 +12,15 @@
   </description>
 
   <releases>
+    <release version="1.0.1" date="2021-09-08">
+      <description>
+        <ul>
+	  <li>include releases in the appdata</li>
+	  <li>fix flatpack manifest</li>
+	</ul>
+      </description>
+    </release>
+
     <release version="1.0.0" date="2021-09-05">
       <description>
         <p>Initial Release 🎉️</p>
