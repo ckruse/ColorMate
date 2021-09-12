@@ -62,6 +62,7 @@ namespace ColorMate {
 
       var clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD);
       color_entry.changed.connect (this.on_color_entry_changed);
+      color_chooser.color_set.connect (this.on_chooser_changed);
       copy_rgb_btn.clicked.connect(() => {
         clipboard.set_text (rgb_lbl.get_text(), -1);
       });
@@ -91,6 +92,17 @@ namespace ColorMate {
         header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         return header;
+    }
+
+    public void on_chooser_changed () {
+      Gdk.Color color;
+      color_chooser.get_color(out color);
+
+      var rgb = Rgb() { r = color.red / 256, g = color.green / 256, b = color.blue / 256 };
+      Hsl hsl;
+
+      rgb2hsl(rgb, out hsl);
+      change_ui (rgb, hsl);
     }
 
     public void on_color_entry_changed () {
