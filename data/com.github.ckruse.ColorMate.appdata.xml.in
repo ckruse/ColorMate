@@ -11,6 +11,12 @@
   </description>
 
   <releases>
+    <release version="1.0.3" date="2021-09-12">
+      <description>
+        <p>This release introduces a new feature: you now can choose a color from the color chooser button and ColorMate will show you the corresponding representations.</p>
+      </description>
+    </release>
+
     <release version="1.0.2" date="2021-09-08">
       <description>
         <p>This release fixes some appdata issues</p>
