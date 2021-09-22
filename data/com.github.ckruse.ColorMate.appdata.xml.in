@@ -11,6 +11,12 @@
   </description>
 
   <releases>
+    <release version="1.0.5" date="2021-09-22">
+      <description>
+        <p>This release fixes some appdata issues</p>
+      </description>
+    </release>
+
     <release version="1.0.4" date="2021-09-21">
       <description>
         <p>Thanks to the fantastic work by github.com/Adithyan-KV ColorMate got a new icon! 🎉</p>
